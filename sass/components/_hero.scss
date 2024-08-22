@@ -1,0 +1,66 @@
+@use '../util/' as u;
+
+.hero {
+  position: relative;
+  background-color: var(--color-purple);
+  text-align: center;
+
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    content: '';
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include u.breakpoint-down(small) {
+      display: none;
+    }
+  }
+
+  &::before {
+    top: 20%;
+    left: 0;
+    inline-size: u.rem(270);
+    block-size: u.rem(217);
+    background-image: url('../../assets/images/bg-pattern-1.svg');
+  }
+
+  &::after {
+    inline-size: u.rem(130);
+    block-size: u.rem(135);
+    right: 0;
+    top: 35%;
+    background-image: url('../../assets/images/bg-pattern-2.svg');
+  }
+
+  &__headline {
+    color: var(--color-white);
+    margin-block-end: u.rem(40);
+    max-inline-size: 16ch;
+    margin-inline: auto;
+  }
+
+  &__headline--border {
+    text-decoration: underline var(--color-green) u.rem(3);
+    text-underline-offset: u.rem(7.5);
+  }
+
+  &__button {
+    margin-block-end: u.rem(50);
+  }
+
+  &__image-wrapper {
+    background-image: linear-gradient(
+      var(--color-purple) 50%,
+      var(--color-white) 50%
+    );
+    padding-inline: 32px;
+  }
+
+  &__image {
+    position: relative;
+    z-index: 1;
+    margin-inline: auto;
+  }
+}

@@ -11,9 +11,13 @@
   padding: 0;
 }
 
+body {
+  background-color: var(--color-white);
+}
+
 img {
   vertical-align: middle;
-  inline-size: 100%;
+  max-inline-size: 100%;
   block-size: auto;
   font-style: italic;
 }

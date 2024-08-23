@@ -6,6 +6,7 @@
     3.1594827586206895rem + 3.5862068965517238vw,
     u.rem(90)
   );
+  padding-block-end: u.rem(64);
 
   &__wrapper {
     display: grid;
@@ -22,6 +23,7 @@
     @include u.breakpoint('large') {
       grid-template-rows: u.rem(173) auto u.rem(173);
       grid-template-columns: auto u.rem(95) auto;
+      padding-block-end: u.rem(120);
     }
   }
 

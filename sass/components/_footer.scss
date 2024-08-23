@@ -1,0 +1,43 @@
+@use '../util/' as u;
+
+.footer {
+  padding-block-end: u.rem(64);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: u.rem(58);
+  }
+
+  &__logo {
+    &:hover {
+      img {
+        opacity: 0.8;
+      }
+    }
+
+    img {
+      transition: opacity 0.2s ease-in-out;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: u.rem(28);
+  }
+
+  &__link {
+    &:hover {
+      path {
+        fill: var(--color-purple);
+      }
+    }
+  }
+
+  &__icon {
+    path {
+      transition: fill 0.2s ease-in-out;
+    }
+  }
+}

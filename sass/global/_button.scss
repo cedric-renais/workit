@@ -5,7 +5,6 @@
   background-color: var(--color-green);
   color: var(--color-purple);
   font-weight: 700;
-  line-height: 1.7;
   border: u.rem(3) solid transparent;
   padding-block: u.rem(13) u.rem(16);
   padding-inline: u.rem(32);
@@ -13,7 +12,7 @@
   transition-property: background-color, color, border-color;
 
   &:hover {
-    background-color: var(--color-purple);
+    background-color: transparent;
     color: var(--color-green);
     border-color: var(--color-green);
   }
